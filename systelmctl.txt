@@ -1,0 +1,110 @@
+15. INSTALLATION OF JENKINS
+ Create ec2 instance with ubntu and in security settings add inbound rules add new
+item with port 8080
+sudo apt update
+sudo apt install openjdk-21-jdk -y
+java -version
+
+ Add Jenkins Debian Packages - https://pkg.jenkins.io/debian/
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+/etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install fontconfig openjdk-21-jre
+sudo apt-get install jenkins
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+ Open public ip address with port to open jenkins :8080
+
+14. INSTALLATION OF SELENIUM
+sudo apt update
+sudo apt upgrade
+sudo apt install python3
+sudo apt install python3-pip
+sudo apt install python3-selenium
+pip3 show selenium
+
+13. INSTALLATION OF GRADLE
+sudo apt update
+sudo apt install openjdk-21-jdk -y
+sudo apt install gradle
+gradle -v
+
+12. INSTALLATION OF GIT
+sudo apt update
+sudo apt install git -y
+git –version
+
+11. INSTALLATION OF KUBERNETS
+sudo apt update
+sudo apt install docker.io
+sudo snap install kubeadm --classic
+sudo snap install kubelet --classic
+sudo snap install kubectl –classic
+kubeadm
+kubeadm version
+
+10. INSTALLATION OF DOCKER
+sudo apt update
+sudo apt install docker.io
+docker –version
+sudo usermod -aG docker $USER
+sudo docker ps
+sudo docker images
+
+8. INSTALLATION OF ANSIBLE
+sudo apt update
+sudo apt install ansible
+ansible –version
+
+9. CREATE ROLES IN ANSIBLE
+sudo apt update
+sudo apt install ansible
+ansible –version
+mkdir mydirectory
+cd mydirectory
+ansible-galaxy init myrole
+
+cd myrole
+cd tasks
+nano myplaybook.yml
+ paste below code in editor
+--- name: My First Playbook
+hosts: localhost
+tasks:
+- name: Print Hello World
+debug:
+msg: "Hello, World!"
+ansible-playbook myplaybook.yml
+
+6. Dynamic configuring network and Hostname resolution
+sudo apt install netplan.io
+netplan –version
+which netplan
+cd /etc/netplan/
+sudo nano 50-cloud-init.yml
+sudo netplan apply
+sudo nano /etc/hosts
+hostname
+sudo systemctl enable ssh
+sudo systemctl start ssh
+sudo systemctl stop ssh
+sudo systemctl status ssh
+sudo apt install apache2
+
+5. INSTALLATION OF LINUX COMMANDS
+sudo apt update
+sudo apt install python3
+sudo apt install python3-pip
+nano filename.py
+
+(write code)
+
+python3 filename.py
+
+(output)
+
+
